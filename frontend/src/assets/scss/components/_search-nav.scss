@@ -1,0 +1,105 @@
+.search-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  &__select-box {
+    position: relative;
+  }
+  &__select {
+    font-size: $small-font-size;
+    padding: 0.7rem 4rem 0.7rem 2rem;
+    color: $color-grey-dark-1;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    font-weight: 400;
+    background-color: $color-primary;
+    color: $color-white;
+    border-top-left-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    background-color: $color-primary-dark;
+    width: 3rem;
+    height: 100%;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    &::before,
+    &::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 50%;
+      content: '';
+      transform: translate(-50%, -50%);
+    }
+    &::before {
+      border-bottom: 0.6rem solid $color-white;
+      border-left: 0.6rem solid transparent;
+      border-right: 0.6rem solid transparent;
+      top: 35%;
+    }
+    &::after {
+      border-top: 0.6rem solid $color-white;
+      border-left: 0.6rem solid transparent;
+      border-right: 0.6rem solid transparent;
+      top: 65%;
+    }
+  }
+  &__input {
+    font-size: $small-font-size;
+    color: inherit;
+    background-color: $color-grey-light-2;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-top-right-radius: 7rem;
+    border-bottom-right-radius: 7rem;
+    margin-left: 0rem;
+    margin-right: -2rem;
+    width: 100%;
+    transition: all 0.2s;
+    &:focus {
+      outline: none;
+      background-color: $color-grey-light-1;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 400;
+      color: $color-grey-dark-3;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: $color-grey-light-2;
+    transition: all 0.2s;
+    border-top-right-radius: 7rem;
+    border-bottom-right-radius: 7rem;
+    transform: translateX(-1.25rem);
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-grey-dark-1;
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: $color-grey-light-1;
+  }
+}

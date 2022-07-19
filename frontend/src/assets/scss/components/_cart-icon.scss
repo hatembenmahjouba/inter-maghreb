@@ -1,0 +1,60 @@
+.cart-icon {
+  border-top-right-radius: $default-border-radius;
+  border-bottom-right-radius: $default-border-radius;
+  height: 100%;
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: $color-primary-light;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-dark,
+    $color-primary
+  );
+  transition: all 0.2s;
+
+  &:hover {
+    background-image: linear-gradient(
+      to right top,
+      $color-primary-dark,
+      $color-primary
+    );
+  }
+  &__icon {
+    height: 5rem;
+    width: 5rem;
+    fill: $color-white;
+
+    &:active {
+      transform: translateY(2px);
+    }
+
+    @include respond(phone) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+  @include respond(tab-port) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1.5rem;
+    &__icon {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  &__item-count {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 900;
+    color: $color-primary-dark;
+    transform: translate(-0.1rem, -0.6rem);
+  }
+
+  &__icon:active + span {
+    transform: translate(-0.1rem, -0.4rem);
+  }
+}

@@ -1,0 +1,54 @@
+// .container {
+//   display: grid;
+//   grid-template-rows: 85vh repeat(4, min-content) auto;
+//   grid-template-columns:
+//     [full-start] minmax(6rem, 1fr) [center-start] repeat(
+//       8,
+//       [col-start] minmax(min-content, 15rem) [col-end]
+//     )
+//     [center-end] minmax(6rem, 1fr) [full-end];
+
+//   @include respond(tab-port) {
+//     grid-template-columns:
+//       [full-start] minmax(4rem, 1fr) [center-start] repeat(
+//         8,
+//         [col-start] minmax(min-content, 15rem) [col-end]
+//       )
+//       [center-end] minmax(4rem, 1fr) [full-end];
+//   }
+//   @include respond(phone) {
+//     grid-template-columns:
+//       [full-start] minmax(2rem, 1fr) [center-start] repeat(
+//         8,
+//         [col-start] minmax(min-content, 15rem) [col-end]
+//       )
+//       [center-end] minmax(2rem, 1fr) [full-end];
+//   }
+// }
+.container {
+  display: grid;
+  grid-template-rows: 85vh repeat(4, min-content) auto;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media screen and (max-width: 50em) {
+    grid-template-columns:
+      [full-start] minmax(4rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 15rem) [col-end]
+      )
+      [center-end] minmax(4rem, 1fr) [full-end];
+  }
+  @media screen and (max-width: 37.5em) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 15rem) [col-end]
+      )
+      [center-end] minmax(2rem, 1fr) [full-end];
+  }
+}

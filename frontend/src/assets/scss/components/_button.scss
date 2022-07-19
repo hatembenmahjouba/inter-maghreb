@@ -1,0 +1,127 @@
+%btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    border: none;
+    font-size: $small-font-size;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+  }
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+%btn-font {
+  color: $color-white;
+  border-radius: $default-border-radius;
+  font-weight: 700;
+}
+
+.btn {
+  @extend %btn;
+  &,
+  &:link,
+  &:visited {
+    @extend %btn-font;
+    background-image: linear-gradient(
+      to right,
+      $color-primary,
+      $color-primary-dark
+    );
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    box-shadow: $box-shadow;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        $color-primary-dark,
+        $color-primary
+      );
+      transform: translateY(-2px);
+    }
+    &:focus {
+      opacity: 0.8;
+    }
+    &:active {
+      box-shadow: $box-shadow-s;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+  }
+}
+
+.btn-text {
+  @extend %btn;
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+
+    color: $color-primary;
+    background-color: inherit;
+    padding: 3px;
+    border-bottom: 1px solid $color-primary;
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.13);
+  }
+  &:active {
+    box-shadow: $box-shadow-s;
+    transform: translateY(0);
+  }
+}
+
+.btn-user {
+  @extend %btn;
+  &,
+  &:link,
+  &:visited {
+    @extend %btn-font;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    background-color: rgba($color-black, 0.25);
+    border: 1px solid $color-white;
+  }
+  &:hover,
+  &--active:link,
+  &--active:visited {
+    background-color: rgba($color-black, 0.75);
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    transform: translateY(-1.5px);
+  }
+  &:active {
+    transform: translateY(-0.5px);
+    outline: none;
+  }
+  &:last-child {
+    margin-right: 0.5rem;
+  }
+}
+
+.btn-add {
+  @extend %btn;
+  border-radius: 3px;
+  background-color: $color-primary;
+  padding: 0.5rem;
+  width: min-content;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-white;
+  }
+}

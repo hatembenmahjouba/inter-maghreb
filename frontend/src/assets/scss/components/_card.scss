@@ -1,0 +1,27 @@
+.card {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 3px;
+  box-shadow: $box-shadow-s;
+  &__paragraph {
+    font-weight: 400;
+    font-size: $default-font-size;
+    color: $color-grey-dark-1;
+  }
+  &__title {
+    font-size: $default-font-size;
+    font-weight: 700;
+    margin-right: 1rem;
+  }
+  &__arrow {
+    cursor: pointer;
+    &--left {
+      margin-right: 0.5rem;
+    }
+    &--right {
+      margin-left: 0.5rem;
+    }
+  }
+}

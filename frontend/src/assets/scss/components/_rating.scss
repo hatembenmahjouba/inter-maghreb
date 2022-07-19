@@ -1,0 +1,21 @@
+.rating {
+  span {
+    margin: 0.1rem;
+  }
+
+  &__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: $color-primary-light-1;
+  }
+
+  &__reviews {
+    font-size: 1.4rem;
+  }
+  &__value {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 0.5rem;
+    color: $color-primary-dark;
+  }
+}

@@ -1,0 +1,30 @@
+.features {
+  grid-column: feature-content-start / feature-content-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-gap: 3rem;
+  align-items: start;
+  @include respond(small-phone) {
+    grid-column: feature-full-start / feature-full-end;
+  }
+}
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-black;
+    width: 5rem;
+    height: 5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: $default-font-size;
+    color: $color-grey-dark-1;
+    font-weight: 400;
+  }
+}

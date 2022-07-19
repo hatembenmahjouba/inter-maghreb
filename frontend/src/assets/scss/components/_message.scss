@@ -1,0 +1,41 @@
+.success,
+.status-green,
+.status-red,
+.status-orange {
+  font-size: $default-font-size;
+  font-weight: 700;
+}
+
+.success {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: $color-white;
+  background-color: $color-green;
+  border: 1px solid $color-green;
+  padding: 2rem;
+  border-radius: 3px;
+  animation: moveInright 0.4s ease-out;
+}
+.status-green {
+  color: $color-green;
+}
+.status-orange {
+  color: $color-primary;
+}
+.status-red {
+  color: $color-red;
+}
+
+.error {
+  color: $color-white;
+  background-color: $color-red;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: $default-font-size;
+  font-weight: 700;
+  padding: 3rem;
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}

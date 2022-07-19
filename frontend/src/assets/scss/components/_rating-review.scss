@@ -1,0 +1,21 @@
+.rating-review {
+  &__label {
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+  &__input {
+    display: none;
+  }
+  &__star {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-grey-dark-2;
+  }
+  &__effect {
+    fill: $color-primary-light-1;
+  }
+  &__hover {
+    fill: rgba($color-primary, 0.5);
+  }
+}

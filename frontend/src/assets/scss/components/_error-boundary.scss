@@ -1,0 +1,12 @@
+.error-boundary {
+  height: 60vh;
+  width: 100%;
+  &__image {
+    display: inline-block;
+    background-image: url(../../img/error-boundary.png);
+    background-size: cover;
+    background-position: center;
+    width: 40vh;
+    height: 40vh;
+  }
+}

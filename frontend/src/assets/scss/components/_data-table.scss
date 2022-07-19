@@ -1,0 +1,55 @@
+.data-table {
+  border-collapse: collapse;
+  border-radius: 3px;
+
+  thead {
+    background-color: rgba($color-black, 0.75);
+    color: $color-white;
+    font-weight: 700;
+  }
+
+  th,
+  td {
+    font-size: $default-font-size;
+    text-align: center;
+    padding: 1rem;
+  }
+  tbody tr:nth-child(even) {
+    background: $color-grey-light-2;
+  }
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    fill: $color-grey-dark-2;
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+  &__img {
+    width: 7rem;
+    height: 7rem;
+  }
+  @include respond(tab-port) {
+    overflow-x: auto;
+    display: block;
+    overflow-y: hidden;
+    max-width: 100%;
+    &::-webkit-scrollbar-track {
+      background-color: $color-primary-light;
+    }
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: $color-white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+      border-radius: 3rem;
+    }
+  }
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+.order {
+  &__orderItems {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+}
+
+.place-order {
+  gap: 3rem;
+
+  &__orderItems {
+    gap: 2rem;
+  }
+}
+
+.order-item {
+  gap: 2rem;
+
+  &__image {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.order-shipping {
+  gap: 2rem;
+  border-bottom: 1px solid $color-grey-light-2;
+  padding-bottom: 2rem;
+}

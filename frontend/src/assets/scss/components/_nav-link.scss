@@ -1,0 +1,173 @@
+%link {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-white;
+}
+%link-1 {
+  font-size: $small-font-size;
+  transition: all 0.2s;
+  font-weight: 700;
+}
+%link-2 {
+  display: block;
+  position: relative;
+}
+%link-3 {
+  padding: 0.7rem 1.5rem;
+  border-radius: 7rem;
+}
+
+.link-user {
+  &:visited,
+  &:link {
+    @extend %link;
+    @extend %link-1;
+    @extend %link-3;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+  }
+  &:hover,
+  &--active:visited,
+  &--active:link {
+    color: $color-primary;
+    background-color: rgba($color-black, 0.75);
+  }
+}
+
+.link-menu {
+  &:visited,
+  &:link {
+    @extend %link;
+    @extend %link-1;
+    @extend %link-3;
+    text-transform: uppercase;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    color: $color-primary;
+    background-color: rgba($color-black, 0.75);
+  }
+
+  &--active {
+    &:visited,
+    &:link {
+      color: $color-primary;
+      transform: translateY(-1px);
+      background-color: rgba($color-black, 0.75);
+    }
+  }
+}
+
+.link-submenu {
+  &:visited,
+  &:link {
+    @extend %link;
+    @extend %link-1;
+    @extend %link-2;
+    padding: 1.2rem 2rem;
+  }
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: $color-primary;
+    transform: scaleY(0);
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    color: $color-primary;
+    background-color: rgba($color-black, 0.75);
+  }
+  &:hover::before,
+  &--active::before {
+    transform: scaleY(1);
+  }
+
+  &--active:visited,
+  &--active:link,
+  &:hover {
+    color: $color-primary;
+    background-color: rgba($color-black, 0.75);
+  }
+}
+
+.link-sidedrawer {
+  &:visited,
+  &:link {
+    @extend %link;
+    @extend %link-1;
+    @extend %link-2;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+  }
+  &--active:visited,
+  &--active:link,
+  &:hover {
+    color: $color-primary;
+    background-color: rgba($color-black, 0.75);
+  }
+}
+
+.link-sidebar {
+  &:visited,
+  &:link {
+    @extend %link;
+    @extend %link-1;
+    @extend %link-2;
+    text-transform: uppercase;
+  }
+  &--active .sidebar__label::before {
+    transform: scaleY(1);
+  }
+  &--sub {
+    padding: 1.5rem 2rem;
+    &:hover,
+    &--active {
+      &:visited,
+      &:link {
+        background-color: $color-primary-dark;
+      }
+    }
+  }
+}
+.link-logo {
+  &:visited,
+  &:link {
+    @extend %link;
+    width: min-content;
+  }
+}
+
+.link-sidedrawer-label {
+  &:visited,
+  &:link {
+    @extend %link;
+    @extend %link-1;
+    text-transform: uppercase;
+  }
+  &:hover,
+  &--active:link,
+  &--active:visited {
+    color: $color-primary;
+  }
+
+  &--active {
+    & .sidedrawer-label {
+      span {
+        color: $color-primary;
+      }
+    }
+    & .sidedrawer-label::before {
+      transform: scaleY(1);
+    }
+  }
+}

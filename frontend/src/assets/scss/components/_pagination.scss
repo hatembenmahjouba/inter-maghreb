@@ -1,0 +1,37 @@
+.pagination {
+  margin-top: 8rem;
+  flex-wrap: wrap;
+  &__item {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: $default-font-size;
+      font-weight: 700;
+      color: $color-primary;
+      padding: 1rem 1.5rem;
+      transition: all 0.2s;
+      box-shadow: $box-shadow-s;
+      border-radius: 3px;
+      &:hover,
+      &:active {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+    &--active {
+      &,
+      &:link,
+      &:visited {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+  @include respond(tab-port) {
+    margin-top: 6rem;
+  }
+  @include respond(phone) {
+    margin-top: 4rem;
+  }
+}

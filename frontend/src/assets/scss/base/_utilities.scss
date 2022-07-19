@@ -1,0 +1,56 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
+  @include respond(phone) {
+    margin-bottom: 2rem !important;
+  }
+}
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 6rem !important;
+  }
+  @include respond(phone) {
+    margin-bottom: 4rem !important;
+  }
+  @include respond(small-phone) {
+    grid-column: full-start / full-end;
+    margin-bottom: 2rem !important;
+  }
+}
+
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-jc-e {
+    justify-content: flex-end;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-ai-s {
+    align-items: flex-start;
+  }
+  &-ai-e {
+    align-items: flex-end;
+  }
+
+  &-dc {
+    flex-direction: column;
+  }
+}

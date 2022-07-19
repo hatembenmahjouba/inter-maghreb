@@ -1,0 +1,27 @@
+.category-list {
+  background-color: $color-grey-dark-2;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-size: $default-font-size;
+  color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    margin: auto;
+    align-self: flex-end;
+    margin-left: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    fill: $color-white;
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+}

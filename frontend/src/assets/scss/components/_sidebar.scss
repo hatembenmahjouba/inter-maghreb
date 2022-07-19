@@ -1,0 +1,50 @@
+.sidebar {
+  font-size: $small-font-size;
+  font-weight: 700;
+  list-style: none;
+  margin-top: 3rem;
+
+  &__item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    text-transform: uppercase;
+    color: $color-white;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: $color-white;
+      transform: scaleY(0);
+      transition: transform 0.2s;
+    }
+
+    &:hover::before {
+      transform: scaleY(1);
+    }
+  }
+  &__icon {
+    fill: $color-white;
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+  }
+  &__sub {
+    display: none;
+    margin-left: 3rem;
+    &--open {
+      display: block;
+    }
+  }
+}

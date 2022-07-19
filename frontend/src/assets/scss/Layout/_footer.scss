@@ -1,0 +1,7 @@
+.footer {
+  background-color: $color-black;
+  grid-column: full-start / full-end;
+  display: flex;
+  justify-content: center;
+  padding: 12rem;
+}

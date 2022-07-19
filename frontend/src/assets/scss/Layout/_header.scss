@@ -1,0 +1,57 @@
+.header {
+  padding-top: 4rem;
+  grid-column: full-start / full-end;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+      rgba($color-black, 0.05),
+      rgba($color-black, 0.05)
+    ),
+    url(../../img/header.jpg);
+
+  display: grid;
+  grid-template-columns:
+    [header-full-start] minmax(6rem, 1fr) [header-content-start] minmax(
+      min-content,
+      120rem
+    )
+    [header-content-end] minmax(6rem, 1fr) [header-full-end];
+  grid-template-rows: min-content;
+
+  &__toolbar {
+    grid-column: header-content-start / header-content-end;
+    border-radius: $default-border-radius;
+    background-color: $color-black;
+  }
+
+  &__banner {
+    padding: 2rem;
+    grid-column: header-full-start / header-full-end;
+    background-image: linear-gradient(
+      to right,
+      rgba($color-black, 0.13),
+      rgba($color-black, 0)
+    );
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    gap: 2rem;
+
+    &-btn {
+      justify-self: center;
+      align-self: center;
+    }
+    @include respond(small-phone) {
+      padding: 0rem;
+    }
+  }
+  @include respond(tab-port) {
+    padding: 0rem;
+    &__toolbar {
+      grid-column: header-full-start / header-full-end;
+      border-radius: 0;
+    }
+  }
+}

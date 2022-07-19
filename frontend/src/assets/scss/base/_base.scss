@@ -1,0 +1,37 @@
+html {
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  box-sizing: border-box;
+  &::-webkit-scrollbar-track {
+    background-color: $color-primary-light;
+  }
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: $color-white;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+    border-radius: 3rem;
+    transition: all 0.2s;
+  }
+  @include respond(desktop) {
+    font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

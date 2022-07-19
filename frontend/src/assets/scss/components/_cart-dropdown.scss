@@ -1,0 +1,37 @@
+.cart-dropdown {
+  position: absolute;
+  width: 27rem;
+  height: 35rem;
+  padding: 2rem;
+  border-radius: 3px;
+  border: 1px solid $color-grey-light-2;
+  background-color: $color-white;
+  top: 12.5rem;
+  right: 3rem;
+  z-index: 100;
+
+  &__items {
+    height: 24rem;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track {
+      background-color: $color-primary-light;
+    }
+    &::-webkit-scrollbar {
+      width: 1rem;
+      background-color: $color-white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+      border-radius: 3rem;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+  @include respond(tab-port) {
+    top: 6rem;
+    right: 0;
+  }
+}

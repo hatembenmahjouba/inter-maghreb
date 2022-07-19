@@ -1,0 +1,15 @@
+.spiner {
+  height: 10vh;
+  width: 100%;
+  cursor: progress;
+  &__container {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    border: 0.3rem solid rgba($color-primary, 0.6);
+    border-radius: 50%;
+    border-top-color: $color-primary-dark;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+}
