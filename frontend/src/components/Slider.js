@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 const Slider = ({ children, sliderId }) => {
-  const slideLeft = () => {
+  const slideLeft = useCallback(() => {
     let slider = document.getElementById(sliderId);
     slider.scrollLeft = slider.scrollLeft - 200;
-  };
-  const slideRight = () => {
+  }, [sliderId]);
+  const slideRight = useCallback(() => {
     let slider = document.getElementById(sliderId);
     slider.scrollLeft = slider.scrollLeft + 200;
-  };
+  }, [sliderId]);
 
   return (
     <>

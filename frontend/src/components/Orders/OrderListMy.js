@@ -7,7 +7,7 @@ const OrderListMy = ({ orders }) => {
     <table className='data-table'>
       <thead className='data-table__header'>
         <tr>
-          <th>ID</th>
+          <th>Order Number</th>
           <th>DATE</th>
           <th>TOTAL</th>
           <th>PAID</th>
@@ -18,7 +18,7 @@ const OrderListMy = ({ orders }) => {
       <tbody className='data-table__body'>
         {orders.map((order) => (
           <tr key={order._id}>
-            <td>{order._id}</td>
+            <td>{order.orderNumber.toString().padStart(8, '0')}</td>
             <td>{order.createdAt.substring(0, 10)}</td>
             <td>{order.totalPrice}</td>
             <td>

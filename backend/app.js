@@ -47,7 +47,7 @@ app.use(
       'rating',
       'numReviews',
       'email',
-      '_id',
+      'orderNumber',
     ],
   })
 );

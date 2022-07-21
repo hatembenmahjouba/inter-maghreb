@@ -3,8 +3,21 @@ import { createOne, getOne, getAll } from './handlerFactory.js';
 import asyncHandler from 'express-async-handler';
 import AppError from '../utils/appError.js';
 
+const DEFAULT_Order_NUMBER = 0;
+async function getLatestOrderNumber() {
+  const latestOrder = await Order.findOne().sort('-orderNumber');
+  if (!latestOrder) {
+    return DEFAULT_Order_NUMBER;
+  }
+  return latestOrder.orderNumber;
+}
 const addOrderItems = (req, res, next) => {
   if (!req.body.user) req.body.user = req.user.id;
+  next();
+};
+const addOrderNumber = async (req, res, next) => {
+  const newOrderNumber = (await getLatestOrderNumber()) + 1;
+  req.body.orderNumber = newOrderNumber;
   next();
 };
 
@@ -39,4 +52,5 @@ export {
   getMyOrders,
   getOrders,
   updateOrderToDelivered,
+  addOrderNumber,
 };

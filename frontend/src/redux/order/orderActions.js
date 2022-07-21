@@ -123,7 +123,7 @@ export const ListMyOrders = () => async (dispatch, getState) => {
 };
 
 export const listOrders =
-  (page = '') =>
+  (search = '', page = '') =>
   async (dispatch) => {
     try {
       dispatch({
@@ -131,7 +131,9 @@ export const listOrders =
       });
 
       const { data } = await axios.get(
-        `/api/v1/orders?page=${page}&limit=30&sort=-updatedAt,-createdAt`
+        `/api/v1/orders?${
+          !search ? '' : `orderNumber=${search}&`
+        }page=${page}&limit=30&sort=-updatedAt,-createdAt`
       );
 
       dispatch({

@@ -10,17 +10,19 @@ import Pagination from '../../components/Pagination';
 import Spiner from '../../components/Spiner';
 
 import useQuery from '../../utils/useQuery';
+import Search from '../../components/Search/Search';
 
 const OrderListPage = () => {
   const dispatch = useDispatch();
   const query = useQuery();
+  let search = query.get('search') || '';
   const orderList = useSelector((state) => state.orderList);
   const { loading, error, orders, pages, page, count } = orderList;
   let pageNumber = Number(query.get('page')) || 1;
 
   useEffect(() => {
-    dispatch(listOrders(pageNumber));
-  }, [dispatch, pageNumber]);
+    dispatch(listOrders(search, pageNumber));
+  }, [dispatch, pageNumber, search]);
   return (
     <>
       <section className='section-user'>
@@ -31,6 +33,7 @@ const OrderListPage = () => {
           <h2 className='heading-2'>Orders</h2>
         </div>
         <div className='section-user__container flex flex-ai-c flex-dc'>
+          <Search name='order number' />
           <Spiner isLoading={loading}>
             {error ? (
               <Message className='error'>{error}</Message>

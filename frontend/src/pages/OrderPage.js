@@ -45,7 +45,9 @@ const OrderPage = () => {
     order && (
       <>
         <section className='section-content flex flex-dc flex-ai-c'>
-          <h2 className='heading-2'>Order {order._id}</h2>
+          <h2 className='heading-2'>
+            Order {order.orderNumber.toString().padStart(8, '0')}
+          </h2>
         </section>
         <section className='section-order flex flex-dc'>
           <Order order={order} />

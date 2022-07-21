@@ -10,7 +10,7 @@ const SIDEDRAWERUSERDATA = [
   },
   {
     title: 'Wish List',
-    path: '/wishtlist',
+    path: '/wishlist',
   },
   {
     title: 'Update My Profile',
