@@ -16,7 +16,7 @@ const CreateProduct = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [brand, setBrand] = useState('');
-  const [image, setImage] = useState('/uploads/images/products/default.png');
+  const [image, setImage] = useState('/uploads/images/products/default.jpg');
   const [category, setCategory] = useState('');
   const [subCategory, setSubCategory] = useState([]);
   const [price, setPrice] = useState('');

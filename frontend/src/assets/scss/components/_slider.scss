@@ -10,7 +10,7 @@
   overflow-x: scroll;
   grid-auto-flow: column;
   display: grid;
-  grid-auto-columns: minmax(25rem, 1fr);
+  grid-auto-columns: minmax(25rem, 35rem);
   align-content: start;
   grid-column-gap: 4rem;
   scroll-behavior: smooth;

@@ -10,11 +10,12 @@
   }
 
   &__reviews {
-    font-size: 1.4rem;
+    font-size: $default-font-size;
+    color: $color-black;
   }
   &__value {
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 0.5rem;
     color: $color-primary-dark;
   }

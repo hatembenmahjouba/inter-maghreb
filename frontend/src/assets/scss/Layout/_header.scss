@@ -6,8 +6,8 @@
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(
-      rgba($color-black, 0.05),
-      rgba($color-black, 0.05)
+      rgba($color-black, 0.15),
+      rgba($color-black, 0.15)
     ),
     url(../../img/header.jpg);
 
@@ -31,7 +31,7 @@
     grid-column: header-full-start / header-full-end;
     background-image: linear-gradient(
       to right,
-      rgba($color-black, 0.13),
+      rgba($color-black, 0.25),
       rgba($color-black, 0)
     );
     justify-self: center;
