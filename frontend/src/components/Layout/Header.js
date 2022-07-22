@@ -39,9 +39,9 @@ const Header = () => {
       ) : null}
 
       <div className='header__banner flex flex-dc flex-ai-c flex-jc-c'>
-        <h1 className='heading-1'>Découvrez Tous nos produits</h1>
+        <h1 className='heading-1'>discover all products</h1>
         <Link to='/products' className='btn'>
-          nos produits
+          our products
         </Link>
       </div>
     </header>

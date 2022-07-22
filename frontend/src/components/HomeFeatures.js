@@ -21,8 +21,8 @@ const HomeFeatures = () => (
 
       <h4 className='heading-4'>EXCELLENT RAPPORT QUALITÉ / PRIX</h4>
       <p className='feature__text'>
-        Les meubles SOTUFAB sont avant tout très bon marché et accessibles à
-        tous. Robustes et d’une qualité irréprochable, en commandant nos
+        Les meubles INTERMAGHREB sont avant tout très bon marché et accessibles
+        à tous. Robustes et d’une qualité irréprochable, en commandant nos
         produits, vous êtes assuré d’obtenir le meilleur rapport qualité / prix
         de mobilier en Tunisie.
       </p>

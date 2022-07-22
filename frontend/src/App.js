@@ -9,32 +9,35 @@ import Spiner from './components/Spiner';
 import AdminRoute from './routes/AdminRoute';
 import UserRoute from './routes/UserRoute';
 
-import CategoryAdminPage from './pages/AdminPages/Category/CategoryPage';
-import CategoryUpdatePage from './pages/AdminPages/Category/CategoryUpdatePage';
-import AdminSubCategoryPage from './pages/AdminPages/SubCategory/SubCategoryPage';
-import SubCategoryUpdatePage from './pages/AdminPages/SubCategory/SubCategoryUpdatePage';
-import UserEditPage from './pages/AdminPages/User/UserEditPage';
-
-import ForgotPasswordPage from './pages/Authentification/ForgotPasswordPage';
-import LoginPage from './pages/Authentification/LoginPage';
-import RegisterPage from './pages/Authentification/RegisterPage';
-import ResetPasswordPage from './pages/Authentification/ResetPasswordPage';
-
-import OrdersMyPage from './pages/ProfilePages/OrdersMyPage';
-import ReviewsMyPage from './pages/ProfilePages/ReviewsMyPage';
-import UpdatePasswordPage from './pages/ProfilePages/UpdatePasswordPage';
-import UpdateProfilePage from './pages/ProfilePages/UpdateProfilePage';
-import UpdateReviewMyPage from './pages/ProfilePages/UpdateReviewMyPage';
-import WishlistPage from './pages/ProfilePages/WishlistPage';
-
-import PlaceOrderPage from './pages/PlaceOrderPage';
 import ShippingPage from './pages/ShippingPage';
-import ProductImage from './components/Products/ProductImage';
 
 import './assets/scss/main.scss';
 import ErrorBoundary from './components/ErrorBoundary';
 import NotFoundPage from './pages/NotFoundPage';
 
+const ProductImage = lazy(() => import('./components/Products/ProductImage'));
+const OrdersMyPage = lazy(() => import('./pages/ProfilePages/OrdersMyPage'));
+const ReviewsMyPage = lazy(() => import('./pages/ProfilePages/ReviewsMyPage'));
+const UpdatePasswordPage = lazy(() =>
+  import('./pages/ProfilePages/UpdatePasswordPage')
+);
+const UpdateReviewMyPage = lazy(() =>
+  import('./pages/ProfilePages/UpdateReviewMyPage')
+);
+const WishlistPage = lazy(() => import('./pages/ProfilePages/WishlistPage'));
+const CategoryAdminPage = lazy(() =>
+  import('./pages/AdminPages/Category/CategoryPage')
+);
+const CategoryUpdatePage = lazy(() =>
+  import('./pages/AdminPages/Category/CategoryUpdatePage')
+);
+const AdminSubCategoryPage = lazy(() =>
+  import('./pages/AdminPages/SubCategory/SubCategoryPage')
+);
+const SubCategoryUpdatePage = lazy(() =>
+  import('./pages/AdminPages/SubCategory/SubCategoryUpdatePage')
+);
+const UserEditPage = lazy(() => import('./pages/AdminPages/User/UserEditPage'));
 const CreateProductPage = lazy(() =>
   import('./pages/AdminPages/Product/CreateProductPage')
 );
@@ -46,10 +49,24 @@ const OrderListPage = lazy(() => import('./pages/AdminPages/OrderListPage'));
 const ReviewsListPage = lazy(() =>
   import('./pages/AdminPages/ReviewsListPage')
 );
+const ForgotPasswordPage = lazy(() =>
+  import('./pages/Authentification/ForgotPasswordPage')
+);
+const LoginPage = lazy(() => import('./pages/Authentification/LoginPage'));
+const RegisterPage = lazy(() =>
+  import('./pages/Authentification/RegisterPage')
+);
+const ResetPasswordPage = lazy(() =>
+  import('./pages/Authentification/ResetPasswordPage')
+);
+const UpdateProfilePage = lazy(() =>
+  import('./pages/ProfilePages/UpdateProfilePage')
+);
 const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 const CheckoutPage = lazy(() => import('./pages/CheckoutPage'));
 const HomePage = lazy(() => import('./pages/HomePage'));
 const OrderPage = lazy(() => import('./pages/OrderPage'));
+const PlaceOrderPage = lazy(() => import('./pages/PlaceOrderPage'));
 const ProductPage = lazy(() => import('./pages/ProductPage'));
 const ProductsPage = lazy(() => import('./pages/ProductsPage'));
 const ProductsListPage = lazy(() =>
