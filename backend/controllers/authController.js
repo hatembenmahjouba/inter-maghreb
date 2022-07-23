@@ -39,7 +39,7 @@ const signup = asyncHandler(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm,
   });
   const url = `http://localhost:3000/updateprofile`;
-  // await new Email(newUser, url).sendWelcome();
+  await new Email(newUser, url).sendWelcome();
 
   createSendToken(newUser, 201, res);
 });
