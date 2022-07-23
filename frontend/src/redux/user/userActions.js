@@ -47,6 +47,7 @@ import {
   USER_RESETPASSWORD_REQUEST,
   USER_RESETPASSWORD_SUCCESS,
   USER_RESETPASSWORD_FAIL,
+  USER_PROFILE_RESET,
 } from './userTypes';
 
 export const login = (email, password) => async (dispatch) => {
@@ -83,6 +84,7 @@ export const logout = () => async (dispatch) => {
   localStorage.removeItem('userInfo');
   localStorage.removeItem('cartItems');
   localStorage.removeItem('shippingAddress');
+  dispatch({ type: USER_PROFILE_RESET });
   dispatch({
     type: USER_LOGOUT,
   });

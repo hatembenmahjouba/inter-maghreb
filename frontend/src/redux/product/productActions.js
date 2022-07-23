@@ -156,7 +156,7 @@ export const createProduct =
     price,
     description
   ) =>
-  async (dispatch, getState) => {
+  async (dispatch) => {
     try {
       dispatch({
         type: PRODUCT_CREATE_REQUEST,

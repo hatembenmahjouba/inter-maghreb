@@ -39,8 +39,15 @@ const ProductCard = ({ product }) => {
             onClick={handleDeleteWishList}
           />
         ))}
-      <Link className='product-card__image' to={`/products/${product.slug}`}>
-        <img src={product.image} alt={`product ${product.slug}`} />
+      <Link
+        className='product-card__image-box'
+        to={`/products/${product.slug}`}
+      >
+        <img
+          className='product-card__image'
+          src={product.image}
+          alt={`product ${product.slug}`}
+        />
       </Link>
       <div className='product-card__body'>
         <h3 className='heading-4'>{product.name}</h3>

@@ -46,7 +46,11 @@ const UserProfileUpdate = () => {
         <>
           <div className='flex flex-dc flex-ai-c'>
             {successUser && (
-              <Message className='success' open>
+              <Message
+                className='success'
+                reset={USER_UPDATE_PROFILE_RESET}
+                open
+              >
                 Profile Updated
               </Message>
             )}

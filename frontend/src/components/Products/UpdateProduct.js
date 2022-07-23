@@ -131,7 +131,9 @@ const UpdateProduct = () => {
           <>
             <div className='flex flex-dc flex-ai-c'>
               <Spiner isLoading={loadingUpdate} />
-              {errorUpdate && <Message className='error'>{error}</Message>}
+              {errorUpdate && (
+                <Message className='error'>{errorUpdate}</Message>
+              )}
               {successUpdate && (
                 <Message
                   className='success'
@@ -158,16 +160,17 @@ const UpdateProduct = () => {
                 </label>
               </div>
               <div className='form__group'>
-                <input
-                  className='form__input'
+                <label className='form__label' htmlFor='description'>
+                  description:
+                </label>
+                <textarea
+                  className='form__textarea'
                   id='description'
                   type='text'
+                  row='5'
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 />
-                <label className='form__label-input' htmlFor='name'>
-                  description
-                </label>
               </div>
               <div className='form__group'>
                 <input

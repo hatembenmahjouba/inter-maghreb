@@ -47,6 +47,18 @@
     @extend %text-input;
     outline: none;
     resize: none;
+    &::-webkit-scrollbar-track {
+      background-color: $color-primary-light;
+    }
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: $color-white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+      border-radius: 3rem;
+    }
   }
 
   &__label {

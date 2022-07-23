@@ -9,7 +9,8 @@ const productSchema = mongoose.Schema(
       type: String,
       trim: true,
       required: [true, 'A product must have a name'],
-      maxlength: 32,
+      minlength: [3, 'Too short'],
+      maxlength: [32, 'Too long'],
     },
     slug: { type: String, unique: true, lowercase: true },
     image: {

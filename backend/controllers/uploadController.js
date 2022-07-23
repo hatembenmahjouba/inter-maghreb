@@ -48,7 +48,10 @@ const resizeProductImage = asyncHandler(async (req, res, next) => {
   if (!req.file) return next();
   req.file.filename = `product-${req.file.fieldname}-${Date.now()}.jpeg`;
   await sharp(req.file.buffer)
-    .resize(2000, 1333)
+    .resize(2000, 1333, {
+      fit: 'contain',
+      background: { r: 255, g: 255, b: 255, alpha: 1 },
+    })
     .toFormat('jpeg')
     .jpeg({ quality: 90 })
     .toFile(`uploads/images/products/${req.file.filename}`);

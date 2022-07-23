@@ -13,23 +13,23 @@ import scolaireLarge from '../../assets/img/scolaire-large.jpg';
 const HOMECATEGORIESDATA = [
   {
     images: [bureauSmall, bureauMedium, bureauLarge],
-    name: 'Bureau',
-    link: '/categories/bureau',
+    name: 'Office',
+    link: '/categories/office',
   },
   {
     images: [rayonnageSmall, rayonnageMedium, rayonnageLarge],
-    name: 'Rayonnage',
-    link: '/categories/rayonnage',
+    name: 'Storage',
+    link: '/categories/storage',
   },
   {
     images: [universitaireSmall, universitaireMedium, universitaireLarge],
-    name: 'Universitaire',
-    link: '/categories/universitaire',
+    name: 'University',
+    link: '/categories/university',
   },
   {
     images: [scolaireSmall, scolaireMedium, scolaireLarge],
-    name: 'Scolaire',
-    link: '/categories/scolaire',
+    name: 'School',
+    link: '/categories/school',
   },
 ];
 
